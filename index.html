@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY AISHU </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            background: url(../aishu/bg.jpg) no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(16, 243, 227); /* Set text color to white */
+        }
+
+        h1 {
+            animation: pop 0.8s ease-out;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .birthday-emojis {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0;
+            animation: fly 3s linear infinite;
+        }
+
+        @keyframes fly {
+            0% { transform: translateY(0) rotate(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        video {
+            width: 80%;
+            max-width: 640px;
+            height: auto;
+            margin-top: 20px;
+            animation: pop 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Loading Animation -->
+<div class="loading">
+    <div id="status">
+        <img src="" alt="loader">
+    </div>
+</div>
+
+<h1>Happy Birthday Aishuuu !</h1>
+<p>Wishing you a day filled with joy, laughter, and wonderful surprises.</p>
+
+<!-- Flying Birthday Emojis -->
+<div class="birthday-emojis">🎉 🎈 🎂 🥳 🎁</div>
+<div class="birthday-emojis">🎉 🎈 🎂 🥳 🎁</div>
+<div class="birthday-emojis">🎉 🎈 🎂 🥳 🎁</div>
+<div class="birthday-emojis">🎉 🎈 🎂 🥳 🎁</div>
+<div class="birthday-emojis">🎉 🎈 🎂 🥳 🎁</div>
+<!-- Video Displayer -->
+<video controls id="birthday-video">
+    <source src="../aishu/lv_0_20240310204822 (1).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<p>Enjoy the video and have a fantastic birthday celebration!</p>
+
+<script>
+    // JavaScript to show loader and hide it when the video is loaded
+    const video = document.getElementById('birthday-video');
+    const loader = document.querySelector('.loading');
+
+    video.addEventListener('loadeddata', () => {
+        loader.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
